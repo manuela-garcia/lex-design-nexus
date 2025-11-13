@@ -181,34 +181,6 @@ const Portfolio = () => {
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="mb-4">What People Say</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Testimonials from colleagues, managers, and stakeholders.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {[1, 2, 3].map((i) => (
-                <Card key={i} className="p-6 hover:shadow-md transition-shadow">
-                  <div className="space-y-4">
-                    <p className="text-muted-foreground italic">
-                      "Placeholder for testimonial quote from peers, managers, or customers. 
-                      This section will showcase feedback about collaboration, impact, and results."
-                    </p>
-                    <div>
-                      <p className="font-semibold text-foreground">Name Placeholder</p>
-                      <p className="text-sm text-muted-foreground">Title, Company</p>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Contact Section */}
         <section id="contact" className="py-20 bg-gradient-subtle">
           <div className="container mx-auto px-4">
