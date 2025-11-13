@@ -11,6 +11,7 @@ import profileImage from "@/assets/profile-placeholder.jpg";
 import caseStudy1 from "@/assets/case-study-1.jpg";
 import caseStudy2 from "@/assets/case-study-2.jpg";
 import caseStudy3 from "@/assets/case-study-3.jpg";
+import caseStudy4 from "@/assets/case-study-4.jpg";
 import { ArrowRight, CheckCircle2, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -125,7 +126,7 @@ const Portfolio = () => {
                 collaboration, and measurable business impact.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
               <CaseStudyCard
                 title="UI Migration Workshop Program"
                 description="Redesigned multi-session workshop program driving +18% page views through cross-functional engineering partnership at Dayforce."
@@ -144,6 +145,12 @@ const Portfolio = () => {
                 description="Led content architecture, requirements gathering, and workflow design for Learning Experience Platform integration."
                 image={caseStudy3}
                 link="/case-study/lxp-integration"
+              />
+              <CaseStudyCard
+                title="Customer Success Skills Enablement Program"
+                description="Consultative analysis and multi-phase training program designed to improve rapport-building, communication quality, and CSAT outcomes for Customer Success Advocates."
+                image={caseStudy4}
+                link="/case-study/customer-success"
               />
             </div>
           </div>

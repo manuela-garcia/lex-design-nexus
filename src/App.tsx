@@ -7,6 +7,7 @@ import Portfolio from "./pages/Portfolio";
 import CaseStudyUIMigration from "./pages/CaseStudyUIMigration";
 import CaseStudyAnalytics from "./pages/CaseStudyAnalytics";
 import CaseStudyLXP from "./pages/CaseStudyLXP";
+import CaseStudyCustomerSuccess from "./pages/CaseStudyCustomerSuccess";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/case-study/ui-migration" element={<CaseStudyUIMigration />} />
           <Route path="/case-study/analytics-program" element={<CaseStudyAnalytics />} />
           <Route path="/case-study/lxp-integration" element={<CaseStudyLXP />} />
+          <Route path="/case-study/customer-success" element={<CaseStudyCustomerSuccess />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
