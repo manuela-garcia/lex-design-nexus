@@ -139,38 +139,6 @@ const Portfolio = () => {
           </div>
         </section>
 
-        {/* Skills Section */}
-        <section id="skills" className="py-24 md:py-32 bg-gradient-subtle">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="mb-6">Skills & Capabilities</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                A comprehensive toolkit for creating impactful learning experiences and driving 
-                product adoption.
-              </p>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {[
-                "Learning Strategy",
-                "Instructional Design for SaaS",
-                "Product-Aligned Enablement",
-                "Data Storytelling",
-                "Content Architecture",
-                "Cross-Functional Influence",
-                "AI-Powered Content Development",
-                "User-Centric Design",
-              ].map((skill) => (
-                <Card key={skill} className="p-6 bg-gradient-card hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20">
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2 className="h-6 w-6 text-secondary flex-shrink-0 mt-1" />
-                    <span className="text-lg font-medium text-foreground">{skill}</span>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Contact Section */}
         <section id="contact" className="py-24 md:py-32">
           <div className="container mx-auto px-4 lg:px-8">
