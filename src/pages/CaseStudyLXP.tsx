@@ -13,17 +13,17 @@ const CaseStudyLXP = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="py-12 bg-gradient-subtle border-b border-border">
-          <div className="container mx-auto px-4">
-            <Button variant="ghost" asChild className="mb-6 focus-visible-ring">
+        <section className="py-16 md:py-20 bg-gradient-subtle border-b-2 border-border/50">
+          <div className="container mx-auto px-4 lg:px-8">
+            <Button variant="ghost" asChild className="mb-8 focus-visible-ring hover:bg-muted/50">
               <Link to="/">
-                <ArrowLeft className="mr-2 h-4 w-4" />
+                <ArrowLeft className="mr-2 h-5 w-5" />
                 Back to Portfolio
               </Link>
             </Button>
             <div className="max-w-4xl">
-              <h1 className="mb-4">LXP Integration Product Work</h1>
-              <p className="text-xl text-muted-foreground">
+              <h1 className="mb-6">LXP Integration Product Work</h1>
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
                 Led content architecture, requirements gathering, and workflow design for a complex 
                 Learning Experience Platform integration initiative.
               </p>
@@ -32,18 +32,18 @@ const CaseStudyLXP = () => {
         </section>
 
         {/* Main Content */}
-        <article className="py-16">
-          <div className="container mx-auto px-4 max-w-4xl">
+        <article className="py-20 md:py-24">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
             <img
               src={caseStudyImage}
               alt="LXP Integration Product Work overview"
-              className="w-full rounded-lg shadow-lg mb-12"
+              className="w-full rounded-xl shadow-xl mb-16"
             />
 
             {/* Problem Section */}
-            <section className="mb-12">
-              <h2 className="mb-6">The Challenge</h2>
-              <Card className="p-8 bg-muted/50">
+            <section className="mb-16">
+              <h2 className="mb-8">The Challenge</h2>
+              <Card className="p-10 bg-gradient-card border-2 shadow-lg">
                 <p className="text-lg text-foreground leading-relaxed">
                   The organization needed to integrate a new Learning Experience Platform with existing 
                   HRIS systems, content repositories, and authentication infrastructure. The integration 
@@ -55,29 +55,29 @@ const CaseStudyLXP = () => {
             </section>
 
             {/* Approach Section */}
-            <section className="mb-12">
-              <h2 className="mb-6">Strategic Approach</h2>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold mb-3 text-heading">Comprehensive Requirements Gathering</h3>
-                  <p className="text-foreground leading-relaxed">
+            <section className="mb-16">
+              <h2 className="mb-8">Strategic Approach</h2>
+              <div className="space-y-8">
+                <div className="border-l-4 border-primary pl-6">
+                  <h3 className="text-xl font-semibold mb-4 text-heading">Comprehensive Requirements Gathering</h3>
+                  <p className="text-foreground leading-relaxed text-lg">
                     Facilitated cross-functional workshops with IT, HR, L&D, and security teams to 
                     document technical requirements, business constraints, and user expectations. Created 
                     detailed requirement matrices that linked business objectives to technical specifications 
                     and user stories.
                   </p>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-3 text-heading">Content Architecture Design</h3>
-                  <p className="text-foreground leading-relaxed">
+                <div className="border-l-4 border-primary pl-6">
+                  <h3 className="text-xl font-semibold mb-4 text-heading">Content Architecture Design</h3>
+                  <p className="text-foreground leading-relaxed text-lg">
                     Designed a scalable content taxonomy that could accommodate current learning materials 
                     while supporting future growth. Mapped existing content to new structures, identified 
                     metadata standards, and created governance processes for content creation and maintenance.
                   </p>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-3 text-heading">Workflow & Process Documentation</h3>
-                  <p className="text-foreground leading-relaxed">
+                <div className="border-l-4 border-primary pl-6">
+                  <h3 className="text-xl font-semibold mb-4 text-heading">Workflow & Process Documentation</h3>
+                  <p className="text-foreground leading-relaxed text-lg">
                     Documented end-to-end workflows for content ingestion, user provisioning, completion 
                     tracking, and reporting. Created process flows, decision trees, and handoff documents 
                     that could be used by both technical teams implementing the integration and operational 
@@ -88,10 +88,10 @@ const CaseStudyLXP = () => {
             </section>
 
             {/* Results Section */}
-            <section className="mb-12">
-              <h2 className="mb-6">Measurable Impact</h2>
-              <div className="grid sm:grid-cols-2 gap-6">
-                <Card className="p-6 bg-primary/5 border-primary/20">
+            <section className="mb-16">
+              <h2 className="mb-8">Measurable Impact</h2>
+              <div className="grid sm:grid-cols-2 gap-8">
+                <Card className="p-8 bg-primary/5 border-2 border-primary/20 hover:shadow-lg transition-shadow">
                   <div className="flex items-start gap-3 mb-3">
                     <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                     <div>
