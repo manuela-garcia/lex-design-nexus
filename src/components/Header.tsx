@@ -21,9 +21,6 @@ const Header = () => {
           <a href="#work" className="text-foreground hover:text-primary transition-colors focus-visible-ring text-base font-medium">
             Work
           </a>
-          <a href="#skills" className="text-foreground hover:text-primary transition-colors focus-visible-ring text-base font-medium">
-            Skills
-          </a>
           <a href="#contact" className="text-foreground hover:text-primary transition-colors focus-visible-ring text-base font-medium">
             Contact
           </a>
@@ -61,13 +58,6 @@ const Header = () => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Work
-              </a>
-              <a 
-                href="#skills" 
-                className="text-foreground hover:text-primary transition-colors focus-visible-ring"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Skills
               </a>
               <a 
                 href="#contact" 
