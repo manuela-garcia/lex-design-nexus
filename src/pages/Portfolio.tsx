@@ -37,30 +37,31 @@ const Portfolio = () => {
       <main>
         {/* Hero Section */}
         <section 
-          className="relative py-20 md:py-32 overflow-hidden"
+          className="relative py-24 md:py-40 overflow-hidden"
           style={{
             backgroundImage: `linear-gradient(135deg, rgba(31, 75, 153, 0.95) 0%, rgba(42, 157, 143, 0.95) 100%), url(${heroImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20"></div>
+          <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="max-w-4xl">
-              <h1 className="text-primary-foreground mb-6">
+              <h1 className="text-primary-foreground mb-8">
                 Learning Experience Designer | Turning Complex Problems Into Scalable Solutions
               </h1>
-              <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
+              <p className="text-xl md:text-2xl text-primary-foreground/90 mb-10 max-w-3xl">
                 Specializing in user-centric design, data storytelling, SaaS product enablement, 
                 and cross-functional collaboration to drive measurable business impact.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" variant="secondary" asChild className="focus-visible-ring">
+                <Button size="lg" variant="secondary" asChild className="focus-visible-ring shadow-lg hover:shadow-xl transition-shadow">
                   <a href="#work">
                     View Portfolio
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" asChild className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 focus-visible-ring">
+                <Button size="lg" variant="outline" asChild className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 focus-visible-ring backdrop-blur-sm">
                   <a href="/resume.pdf" download>
                     Download Resume
                   </a>
@@ -71,43 +72,25 @@ const Portfolio = () => {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-20 bg-gradient-subtle">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <section id="about" className="py-24 md:py-32 bg-gradient-subtle">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
               <div className="order-2 md:order-1">
-                <h2 className="mb-6">About Me</h2>
-                <div className="space-y-4 text-foreground leading-relaxed">
-                  <p>
-                    I'm a Learning Experience Designer who brings a unique perspective shaped by a 
-                    background as a professional athlete and triathlete. This foundation instilled 
-                    in me the discipline, strategic thinking, and resilience that now drive my 
-                    approach to complex learning challenges.
-                  </p>
-                  <p>
-                    After a transformative 6-month Product Management rotation, I discovered my 
-                    passion for the intersection of product strategy and learning enablement. Today, 
-                    I specialize in designing scalable learning experiences for SaaS products, 
-                    partnering with cross-functional teams to deliver solutions that drive adoption 
-                    and business outcomes.
-                  </p>
-                  <p>
-                    My work is characterized by operational rigor, data-driven decision making, and 
-                    an unwavering focus on user impact at scale. Whether it's architecting content 
-                    ecosystems, facilitating engineering partnerships, or translating complex technical 
-                    concepts into actionable learning paths, I thrive on turning ambiguity into clarity.
-                  </p>
+                <h2 className="mb-8">About Me</h2>
+                <div className="space-y-6 text-foreground text-lg">
+...
                 </div>
               </div>
               <div className="order-1 md:order-2 flex justify-center">
                 <div className="relative">
-                  <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-lg">
+                  <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-xl ring-4 ring-primary/10">
                     <img
                       src={profileImage}
                       alt="Professional portrait"
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-6 py-3 rounded-full font-semibold shadow-md">
+                  <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-6 py-3 rounded-full font-semibold shadow-lg">
                     10+ Years Experience
                   </div>
                 </div>
@@ -117,16 +100,16 @@ const Portfolio = () => {
         </section>
 
         {/* Featured Work Section */}
-        <section id="work" className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="mb-4">Featured Work</h2>
+        <section id="work" className="py-24 md:py-32">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="mb-6">Featured Work</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Explore case studies showcasing strategic learning solutions, cross-functional 
                 collaboration, and measurable business impact.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
               <CaseStudyCard
                 title="UI Migration Workshop Program"
                 description="Redesigned multi-session workshop program driving +18% page views through cross-functional engineering partnership at Dayforce."
@@ -157,10 +140,10 @@ const Portfolio = () => {
         </section>
 
         {/* Skills Section */}
-        <section id="skills" className="py-20 bg-gradient-subtle">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="mb-4">Skills & Capabilities</h2>
+        <section id="skills" className="py-24 md:py-32 bg-gradient-subtle">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="mb-6">Skills & Capabilities</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 A comprehensive toolkit for creating impactful learning experiences and driving 
                 product adoption.
@@ -177,9 +160,9 @@ const Portfolio = () => {
                 "AI-Powered Content Development",
                 "User-Centric Design",
               ].map((skill) => (
-                <Card key={skill} className="p-6 hover:shadow-md transition-shadow">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="h-6 w-6 text-secondary flex-shrink-0 mt-0.5" />
+                <Card key={skill} className="p-6 bg-gradient-card hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle2 className="h-6 w-6 text-secondary flex-shrink-0 mt-1" />
                     <span className="text-lg font-medium text-foreground">{skill}</span>
                   </div>
                 </Card>
@@ -189,17 +172,17 @@ const Portfolio = () => {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-20 bg-gradient-subtle">
-          <div className="container mx-auto px-4">
+        <section id="contact" className="py-24 md:py-32">
+          <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="mb-4">Get In Touch</h2>
+              <div className="text-center mb-16">
+                <h2 className="mb-6">Get In Touch</h2>
                 <p className="text-xl text-muted-foreground">
                   Let's discuss how we can work together to create impactful learning experiences.
                 </p>
               </div>
-              <div className="grid md:grid-cols-2 gap-8">
-                <Card className="p-8">
+              <div className="grid md:grid-cols-2 gap-12">
+                <Card className="p-8 shadow-lg border-2">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
                       <Label htmlFor="name" className="text-foreground">
@@ -243,35 +226,35 @@ const Portfolio = () => {
                         aria-required="true"
                       />
                     </div>
-                    <Button type="submit" size="lg" className="w-full focus-visible-ring">
+                    <Button type="submit" size="lg" className="w-full focus-visible-ring shadow-md hover:shadow-lg transition-shadow">
                       Send Message
                     </Button>
                   </form>
                 </Card>
-                <div className="flex flex-col justify-center space-y-6">
+                <div className="flex flex-col justify-center space-y-8">
                   <div>
-                    <h3 className="text-xl font-semibold mb-4">Connect With Me</h3>
-                    <div className="space-y-4">
+                    <h3 className="text-2xl font-semibold mb-6">Connect With Me</h3>
+                    <div className="space-y-6">
                       <a
                         href="https://linkedin.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 text-foreground hover:text-primary transition-colors focus-visible-ring p-2 -ml-2"
+                        className="flex items-center gap-4 text-foreground hover:text-primary transition-colors focus-visible-ring p-3 -ml-3 rounded-lg hover:bg-muted/50"
                       >
                         <Linkedin className="h-6 w-6" />
-                        <span>LinkedIn Profile</span>
+                        <span className="text-lg">LinkedIn Profile</span>
                       </a>
                       <a
                         href="mailto:contact@example.com"
-                        className="flex items-center gap-3 text-foreground hover:text-primary transition-colors focus-visible-ring p-2 -ml-2"
+                        className="flex items-center gap-4 text-foreground hover:text-primary transition-colors focus-visible-ring p-3 -ml-3 rounded-lg hover:bg-muted/50"
                       >
                         <Mail className="h-6 w-6" />
-                        <span>contact@example.com</span>
+                        <span className="text-lg">contact@example.com</span>
                       </a>
                     </div>
                   </div>
                   <div>
-                    <Button variant="outline" size="lg" asChild className="w-full focus-visible-ring">
+                    <Button variant="outline" size="lg" asChild className="w-full focus-visible-ring border-2 shadow-sm hover:shadow-md transition-shadow">
                       <a href="/resume.pdf" download>
                         Download Resume
                       </a>

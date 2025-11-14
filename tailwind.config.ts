@@ -52,12 +52,17 @@ export default {
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-subtle': 'var(--gradient-subtle)',
+        'gradient-card': 'var(--gradient-card)',
+        'gradient-primary-soft': 'var(--gradient-primary-soft)',
       },
       boxShadow: {
+        'xs': 'var(--shadow-xs)',
         'sm': 'var(--shadow-sm)',
         'md': 'var(--shadow-md)',
         'lg': 'var(--shadow-lg)',
+        'xl': 'var(--shadow-xl)',
         'hover': 'var(--shadow-hover)',
+        'inner': 'var(--shadow-inner)',
       },
       transitionProperty: {
         'base': 'var(--transition-base)',

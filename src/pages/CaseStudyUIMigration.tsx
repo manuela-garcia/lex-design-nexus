@@ -13,20 +13,20 @@ const CaseStudyUIMigration = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="py-12 bg-gradient-subtle border-b border-border">
-          <div className="container mx-auto px-4">
-            <Button variant="ghost" asChild className="mb-6 focus-visible-ring">
+        <section className="py-16 md:py-20 bg-gradient-subtle border-b-2 border-border/50">
+          <div className="container mx-auto px-4 lg:px-8">
+            <Button variant="ghost" asChild className="mb-8 focus-visible-ring hover:bg-muted/50">
               <Link to="/">
-                <ArrowLeft className="mr-2 h-4 w-4" />
+                <ArrowLeft className="mr-2 h-5 w-5" />
                 Back to Portfolio
               </Link>
             </Button>
             <div className="max-w-4xl">
-              <div className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full font-semibold mb-4">
+              <div className="inline-block bg-accent text-accent-foreground px-5 py-2 rounded-full font-semibold mb-6 shadow-md">
                 +18% Page Views
               </div>
-              <h1 className="mb-4">UI Migration Workshop Program</h1>
-              <p className="text-xl text-muted-foreground">
+              <h1 className="mb-6">UI Migration Workshop Program</h1>
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
                 Redesigned multi-session workshop program at Dayforce, driving significant engagement 
                 increases through strategic cross-functional engineering partnerships.
               </p>
@@ -35,18 +35,18 @@ const CaseStudyUIMigration = () => {
         </section>
 
         {/* Main Content */}
-        <article className="py-16">
-          <div className="container mx-auto px-4 max-w-4xl">
+        <article className="py-20 md:py-24">
+          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
             <img
               src={caseStudyImage}
               alt="UI Migration Workshop Program overview"
-              className="w-full rounded-lg shadow-lg mb-12"
+              className="w-full rounded-xl shadow-xl mb-16"
             />
 
             {/* Problem Section */}
-            <section className="mb-12">
-              <h2 className="mb-6">The Challenge</h2>
-              <Card className="p-8 bg-muted/50">
+            <section className="mb-16">
+              <h2 className="mb-8">The Challenge</h2>
+              <Card className="p-10 bg-gradient-card border-2 shadow-lg">
                 <p className="text-lg text-foreground leading-relaxed">
                   Dayforce was undergoing a major UI migration that required thousands of users to adapt 
                   to new interfaces and workflows. The existing learning resources were fragmented, 
@@ -58,30 +58,30 @@ const CaseStudyUIMigration = () => {
             </section>
 
             {/* Approach Section */}
-            <section className="mb-12">
-              <h2 className="mb-6">Strategic Approach</h2>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold mb-3 text-heading">Cross-Functional Partnership</h3>
-                  <p className="text-foreground leading-relaxed">
+            <section className="mb-16">
+              <h2 className="mb-8">Strategic Approach</h2>
+              <div className="space-y-8">
+                <div className="border-l-4 border-primary pl-6">
+                  <h3 className="text-xl font-semibold mb-4 text-heading">Cross-Functional Partnership</h3>
+                  <p className="text-foreground leading-relaxed text-lg">
                     Partnered directly with the engineering team to understand technical constraints, 
                     migration timelines, and key user pain points. Conducted stakeholder interviews 
                     with product managers, UX designers, and customer success teams to align on 
                     business objectives and success metrics.
                   </p>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-3 text-heading">Multi-Session Program Design</h3>
-                  <p className="text-foreground leading-relaxed">
+                <div className="border-l-4 border-primary pl-6">
+                  <h3 className="text-xl font-semibold mb-4 text-heading">Multi-Session Program Design</h3>
+                  <p className="text-foreground leading-relaxed text-lg">
                     Redesigned the workshop series from a one-time event into a progressive learning 
                     journey. Created three distinct sessions targeting different user maturity levels, 
                     each building on the previous session's concepts. Incorporated hands-on exercises, 
                     real-world scenarios, and interactive Q&A segments.
                   </p>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-3 text-heading">Data-Driven Content Strategy</h3>
-                  <p className="text-foreground leading-relaxed">
+                <div className="border-l-4 border-primary pl-6">
+                  <h3 className="text-xl font-semibold mb-4 text-heading">Data-Driven Content Strategy</h3>
+                  <p className="text-foreground leading-relaxed text-lg">
                     Analyzed existing support ticket data, user analytics, and feedback surveys to 
                     identify the most critical learning gaps. Prioritized content based on impact and 
                     frequency of user issues. Created modular content blocks that could be remixed 
@@ -92,10 +92,10 @@ const CaseStudyUIMigration = () => {
             </section>
 
             {/* Results Section */}
-            <section className="mb-12">
-              <h2 className="mb-6">Measurable Impact</h2>
-              <div className="grid sm:grid-cols-2 gap-6">
-                <Card className="p-6 bg-primary/5 border-primary/20">
+            <section className="mb-16">
+              <h2 className="mb-8">Measurable Impact</h2>
+              <div className="grid sm:grid-cols-2 gap-8">
+                <Card className="p-8 bg-primary/5 border-2 border-primary/20 hover:shadow-lg transition-shadow">
                   <div className="flex items-start gap-3 mb-3">
                     <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                     <div>
