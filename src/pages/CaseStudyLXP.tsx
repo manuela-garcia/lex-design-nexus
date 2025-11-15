@@ -2,9 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ImageCarousel from "@/components/ImageCarousel";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import caseStudyImage from "@/assets/case-study-3.jpg";
+// Carousel slide images - Replace these paths with your actual screenshots
+import slide1 from "@/assets/lxp-slide-1.png";
+import slide2 from "@/assets/lxp-slide-2.png";
+import slide3 from "@/assets/lxp-slide-3.png";
 
 const CaseStudyLXP = () => {
   return (
@@ -85,6 +90,34 @@ const CaseStudyLXP = () => {
                   </p>
                 </div>
               </div>
+            </section>
+
+            {/* Platform Screenshots Carousel */}
+            <section className="mb-20">
+              <h2 className="mb-8 text-center">LXP Architecture & Interface</h2>
+              {/* 
+                TO UPDATE CAROUSEL:
+                1. Replace slide image paths in the imports at the top of this file
+                2. Update the alt text below to describe each screenshot accurately
+                3. Add or remove slides by modifying the slides array
+              */}
+              <ImageCarousel 
+                slides={[
+                  { 
+                    src: slide1, 
+                    alt: "LXP content architecture diagram showing taxonomy and integration points - Replace with actual architecture screenshot" 
+                  },
+                  { 
+                    src: slide2, 
+                    alt: "Workflow design interface showing content ingestion and automation rules - Replace with actual workflow screenshot" 
+                  },
+                  { 
+                    src: slide3, 
+                    alt: "User experience dashboard with personalized learning paths and progress tracking - Replace with actual UX screenshot" 
+                  },
+                ]}
+                ariaLabel="LXP Integration project screenshots"
+              />
             </section>
 
             {/* Results Section */}

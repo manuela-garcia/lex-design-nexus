@@ -2,9 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ImageCarousel from "@/components/ImageCarousel";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import caseStudyImage from "@/assets/case-study-2.jpg";
+// Carousel slide images - Replace these paths with your actual screenshots
+import slide1 from "@/assets/analytics-slide-1.png";
+import slide2 from "@/assets/analytics-slide-2.png";
+import slide3 from "@/assets/analytics-slide-3.png";
 
 const CaseStudyAnalytics = () => {
   return (
@@ -84,6 +89,34 @@ const CaseStudyAnalytics = () => {
                   </p>
                 </div>
               </div>
+            </section>
+
+            {/* Program Screenshots Carousel */}
+            <section className="mb-20">
+              <h2 className="mb-8 text-center">Learning Platform & Features</h2>
+              {/* 
+                TO UPDATE CAROUSEL:
+                1. Replace slide image paths in the imports at the top of this file
+                2. Update the alt text below to describe each screenshot accurately
+                3. Add or remove slides by modifying the slides array
+              */}
+              <ImageCarousel 
+                slides={[
+                  { 
+                    src: slide1, 
+                    alt: "Analytics dashboard showing business intelligence features and custom reports - Replace with actual platform screenshot" 
+                  },
+                  { 
+                    src: slide2, 
+                    alt: "Persona-based learning paths and skill progression tracking interface - Replace with actual learning interface screenshot" 
+                  },
+                  { 
+                    src: slide3, 
+                    alt: "Program success metrics showing adoption rates and user engagement - Replace with actual metrics screenshot" 
+                  },
+                ]}
+                ariaLabel="Reporting and Analytics Learning Program screenshots"
+              />
             </section>
 
             {/* Results Section */}

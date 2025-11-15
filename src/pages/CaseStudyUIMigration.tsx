@@ -2,9 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ImageCarousel from "@/components/ImageCarousel";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import caseStudyImage from "@/assets/case-study-1.jpg";
+// Carousel slide images - Replace these paths with your actual screenshots
+import slide1 from "@/assets/ui-migration-slide-1.png";
+import slide2 from "@/assets/ui-migration-slide-2.png";
+import slide3 from "@/assets/ui-migration-slide-3.png";
 
 const CaseStudyUIMigration = () => {
   return (
@@ -89,6 +94,34 @@ const CaseStudyUIMigration = () => {
                   </p>
                 </div>
               </div>
+            </section>
+
+            {/* Program Screenshots Carousel */}
+            <section className="mb-20">
+              <h2 className="mb-8 text-center">Program Interface & Content</h2>
+              {/* 
+                TO UPDATE CAROUSEL:
+                1. Replace slide image paths in the imports at the top of this file
+                2. Update the alt text below to describe each screenshot accurately
+                3. Add or remove slides by modifying the slides array
+              */}
+              <ImageCarousel 
+                slides={[
+                  { 
+                    src: slide1, 
+                    alt: "UI Migration Workshop dashboard showing session overview and participant progress - Replace with actual workshop interface screenshot" 
+                  },
+                  { 
+                    src: slide2, 
+                    alt: "Workshop engagement metrics and analytics dashboard - Replace with actual metrics screenshot" 
+                  },
+                  { 
+                    src: slide3, 
+                    alt: "Interactive workshop content showing before-and-after UI comparisons - Replace with actual content screenshot" 
+                  },
+                ]}
+                ariaLabel="UI Migration Workshop program screenshots"
+              />
             </section>
 
             {/* Results Section */}
