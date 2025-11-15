@@ -12,6 +12,10 @@ import caseStudy1 from "@/assets/case-study-1.jpg";
 import caseStudy2 from "@/assets/case-study-2.jpg";
 import caseStudy3 from "@/assets/case-study-3.jpg";
 import caseStudy4 from "@/assets/case-study-4.jpg";
+import uiMigrationScreenshot from "@/assets/ui-migration-screenshot.png";
+import analyticsScreenshot from "@/assets/analytics-program-screenshot.png";
+import lxpScreenshot from "@/assets/lxp-integration-screenshot.png";
+import customerSuccessScreenshot from "@/assets/customer-success-screenshot.png";
 import { ArrowRight, CheckCircle2, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -114,6 +118,7 @@ const Portfolio = () => {
                 title="UI Migration Workshop Program"
                 description="Redesigned multi-session workshop program driving +18% page views through cross-functional engineering partnership at Dayforce."
                 image={caseStudy1}
+                screenshot={uiMigrationScreenshot}
                 link="/case-study/ui-migration"
                 metric="+18% Views"
               />
@@ -121,18 +126,21 @@ const Portfolio = () => {
                 title="Reporting & Analytics Learning Program"
                 description="Business-aligned enablement program designed to drive adoption of critical reporting and analytics features."
                 image={caseStudy2}
+                screenshot={analyticsScreenshot}
                 link="/case-study/analytics-program"
               />
               <CaseStudyCard
                 title="LXP Integration Product Work"
                 description="Led content architecture, requirements gathering, and workflow design for Learning Experience Platform integration."
                 image={caseStudy3}
+                screenshot={lxpScreenshot}
                 link="/case-study/lxp-integration"
               />
               <CaseStudyCard
                 title="Customer Success Skills Enablement Program"
                 description="Consultative analysis and multi-phase training program designed to improve rapport-building, communication quality, and CSAT outcomes for Customer Success Advocates."
                 image={caseStudy4}
+                screenshot={customerSuccessScreenshot}
                 link="/case-study/customer-success"
               />
             </div>
