@@ -2,9 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ImageCarousel from "@/components/ImageCarousel";
 import caseStudyImage from "@/assets/case-study-4.jpg";
 import { ArrowLeft, Target, Users, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+// Carousel slide images - Replace these paths with your actual screenshots
+import slide1 from "@/assets/customer-success-slide-1.png";
+import slide2 from "@/assets/customer-success-slide-2.png";
+import slide3 from "@/assets/customer-success-slide-3.png";
 
 const CaseStudyCustomerSuccess = () => {
   return (
@@ -248,6 +253,38 @@ const CaseStudyCustomerSuccess = () => {
                   </div>
                 </Card>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Training Platform Screenshots Carousel */}
+        <section className="py-20 bg-gradient-subtle">
+          <div className="container mx-auto px-4 lg:px-8">
+            <h2 className="mb-12 text-center">Training Platform & Modules</h2>
+            <div className="max-w-5xl mx-auto">
+              {/* 
+                TO UPDATE CAROUSEL:
+                1. Replace slide image paths in the imports at the top of this file
+                2. Update the alt text below to describe each screenshot accurately
+                3. Add or remove slides by modifying the slides array
+              */}
+              <ImageCarousel 
+                slides={[
+                  { 
+                    src: slide1, 
+                    alt: "Customer Success training modules showing communication skills and rapport-building exercises - Replace with actual training platform screenshot" 
+                  },
+                  { 
+                    src: slide2, 
+                    alt: "Performance dashboard with CSAT trends, quality assurance results, and proficiency tracking - Replace with actual metrics screenshot" 
+                  },
+                  { 
+                    src: slide3, 
+                    alt: "Multi-phase program structure showing onboarding, skill development, and continuous learning paths - Replace with actual program interface screenshot" 
+                  },
+                ]}
+                ariaLabel="Customer Success Skills Enablement Program screenshots"
+              />
             </div>
           </div>
         </section>
