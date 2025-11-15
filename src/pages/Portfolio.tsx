@@ -19,35 +19,32 @@ import customerSuccessScreenshot from "@/assets/customer-success-screenshot.png"
 import { ArrowRight, CheckCircle2, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-
 const Portfolio = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    message: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Form submission logic would go here
     toast.success("Message sent successfully!");
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({
+      name: "",
+      email: "",
+      message: ""
+    });
   };
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       <main>
         {/* Hero Section */}
-        <section 
-          className="relative py-24 md:py-40 overflow-hidden"
-          style={{
-            backgroundImage: `linear-gradient(135deg, rgba(31, 75, 153, 0.95) 0%, rgba(42, 157, 143, 0.95) 100%), url(${heroImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
+        <section className="relative py-24 md:py-40 overflow-hidden" style={{
+        backgroundImage: `linear-gradient(135deg, rgba(31, 75, 153, 0.95) 0%, rgba(42, 157, 143, 0.95) 100%), url(${heroImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20"></div>
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="max-w-4xl">
@@ -66,9 +63,7 @@ const Portfolio = () => {
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" asChild className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 focus-visible-ring backdrop-blur-sm">
-                  <a href="/resume.pdf" download>
-                    Download Resume
-                  </a>
+                  
                 </Button>
               </div>
             </div>
@@ -88,11 +83,7 @@ const Portfolio = () => {
               <div className="order-1 md:order-2 flex justify-center">
                 <div className="relative">
                   <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-xl ring-4 ring-primary/10">
-                    <img
-                      src={profileImage}
-                      alt="Professional portrait"
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={profileImage} alt="Professional portrait" className="w-full h-full object-cover" />
                   </div>
                   <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-6 py-3 rounded-full font-semibold shadow-lg">
                     10+ Years Experience
@@ -114,35 +105,10 @@ const Portfolio = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-              <CaseStudyCard
-                title="UI Migration Workshop Program"
-                description="Redesigned multi-session workshop program driving +18% page views through cross-functional engineering partnership at Dayforce."
-                image={caseStudy1}
-                screenshot={uiMigrationScreenshot}
-                link="/case-study/ui-migration"
-                metric="+18% Views"
-              />
-              <CaseStudyCard
-                title="Reporting & Analytics Learning Program"
-                description="Business-aligned enablement program designed to drive adoption of critical reporting and analytics features."
-                image={caseStudy2}
-                screenshot={analyticsScreenshot}
-                link="/case-study/analytics-program"
-              />
-              <CaseStudyCard
-                title="LXP Integration Product Work"
-                description="Led content architecture, requirements gathering, and workflow design for Learning Experience Platform integration."
-                image={caseStudy3}
-                screenshot={lxpScreenshot}
-                link="/case-study/lxp-integration"
-              />
-              <CaseStudyCard
-                title="Customer Success Skills Enablement Program"
-                description="Consultative analysis and multi-phase training program designed to improve rapport-building, communication quality, and CSAT outcomes for Customer Success Advocates."
-                image={caseStudy4}
-                screenshot={customerSuccessScreenshot}
-                link="/case-study/customer-success"
-              />
+              <CaseStudyCard title="UI Migration Workshop Program" description="Redesigned multi-session workshop program driving +18% page views through cross-functional engineering partnership at Dayforce." image={caseStudy1} screenshot={uiMigrationScreenshot} link="/case-study/ui-migration" metric="+18% Views" />
+              <CaseStudyCard title="Reporting & Analytics Learning Program" description="Business-aligned enablement program designed to drive adoption of critical reporting and analytics features." image={caseStudy2} screenshot={analyticsScreenshot} link="/case-study/analytics-program" />
+              <CaseStudyCard title="LXP Integration Product Work" description="Led content architecture, requirements gathering, and workflow design for Learning Experience Platform integration." image={caseStudy3} screenshot={lxpScreenshot} link="/case-study/lxp-integration" />
+              <CaseStudyCard title="Customer Success Skills Enablement Program" description="Consultative analysis and multi-phase training program designed to improve rapport-building, communication quality, and CSAT outcomes for Customer Success Advocates." image={caseStudy4} screenshot={customerSuccessScreenshot} link="/case-study/customer-success" />
             </div>
           </div>
         </section>
@@ -164,43 +130,28 @@ const Portfolio = () => {
                       <Label htmlFor="name" className="text-foreground">
                         Name
                       </Label>
-                      <Input
-                        id="name"
-                        type="text"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        required
-                        className="focus-visible-ring"
-                        aria-required="true"
-                      />
+                      <Input id="name" type="text" value={formData.name} onChange={e => setFormData({
+                      ...formData,
+                      name: e.target.value
+                    })} required className="focus-visible-ring" aria-required="true" />
                     </div>
                     <div>
                       <Label htmlFor="email" className="text-foreground">
                         Email
                       </Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        required
-                        className="focus-visible-ring"
-                        aria-required="true"
-                      />
+                      <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
+                      ...formData,
+                      email: e.target.value
+                    })} required className="focus-visible-ring" aria-required="true" />
                     </div>
                     <div>
                       <Label htmlFor="message" className="text-foreground">
                         Message
                       </Label>
-                      <Textarea
-                        id="message"
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        required
-                        rows={5}
-                        className="focus-visible-ring"
-                        aria-required="true"
-                      />
+                      <Textarea id="message" value={formData.message} onChange={e => setFormData({
+                      ...formData,
+                      message: e.target.value
+                    })} required rows={5} className="focus-visible-ring" aria-required="true" />
                     </div>
                     <Button type="submit" size="lg" className="w-full focus-visible-ring shadow-md hover:shadow-lg transition-shadow">
                       Send Message
@@ -211,19 +162,11 @@ const Portfolio = () => {
                   <div>
                     <h3 className="text-2xl font-semibold mb-6">Connect With Me</h3>
                     <div className="space-y-6">
-                      <a
-                        href="https://linkedin.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-4 text-foreground hover:text-primary transition-colors focus-visible-ring p-3 -ml-3 rounded-lg hover:bg-muted/50"
-                      >
+                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-foreground hover:text-primary transition-colors focus-visible-ring p-3 -ml-3 rounded-lg hover:bg-muted/50">
                         <Linkedin className="h-6 w-6" />
                         <span className="text-lg">LinkedIn Profile</span>
                       </a>
-                      <a
-                        href="mailto:contact@example.com"
-                        className="flex items-center gap-4 text-foreground hover:text-primary transition-colors focus-visible-ring p-3 -ml-3 rounded-lg hover:bg-muted/50"
-                      >
+                      <a href="mailto:contact@example.com" className="flex items-center gap-4 text-foreground hover:text-primary transition-colors focus-visible-ring p-3 -ml-3 rounded-lg hover:bg-muted/50">
                         <Mail className="h-6 w-6" />
                         <span className="text-lg">contact@example.com</span>
                       </a>
@@ -244,8 +187,6 @@ const Portfolio = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Portfolio;
