@@ -49,16 +49,7 @@ const Portfolio = () => {
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="max-w-4xl">
               <h1 className="text-primary-foreground mb-8">
-                
-
-
-
-
-
-
-
-Manuela Garcia
-Learning Experience Designer                                                                                                                                 
+                Manuela Garcia
               </h1>
               <p className="text-xl md:text-2xl text-primary-foreground/90 mb-10 max-w-3xl">
                 Specializing in user-centric design, data storytelling, SaaS product enablement, 
