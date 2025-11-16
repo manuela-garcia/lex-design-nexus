@@ -7,7 +7,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import heroImage from "@/assets/hero-bg.jpg";
-import profileImage from "@/assets/profile-placeholder.jpg";
+// TODO: Replace this placeholder image with your actual profile photo
+// Upload your photo to: src/assets/about/profile-photo.png
+import profileImage from "@/assets/about/profile-photo.png";
 import caseStudy1 from "@/assets/case-study-1.jpg";
 import caseStudy2 from "@/assets/case-study-2.jpg";
 import caseStudy3 from "@/assets/case-study-3.jpg";
@@ -70,20 +72,37 @@ const Portfolio = () => {
         <section id="about" className="py-24 md:py-32 bg-gradient-subtle">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-              <div className="order-2 md:order-1">
-                <h2 className="mb-8">About Me</h2>
-                <div className="space-y-6 text-foreground text-lg">
-...
-                </div>
-              </div>
-              <div className="order-1 md:order-2 flex justify-center">
+              {/* Profile Photo - Left on Desktop, Top on Mobile */}
+              <div className="order-1 md:order-1 flex justify-center">
                 <div className="relative">
-                  <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-xl ring-4 ring-primary/10">
-                    <img src={profileImage} alt="Professional portrait" className="w-full h-full object-cover" />
+                  <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary shadow-elegant ring-4 ring-primary/10">
+                    {/* TODO: Update alt text with your name */}
+                    <img 
+                      src={profileImage} 
+                      alt="Photo of Manuela Garcia" 
+                      className="w-full h-full object-cover" 
+                    />
                   </div>
                   <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-6 py-3 rounded-full font-semibold shadow-lg">
                     10+ Years Experience
                   </div>
+                </div>
+              </div>
+              {/* Bio Text - Right on Desktop, Bottom on Mobile */}
+              <div className="order-2 md:order-2">
+                <h2 className="mb-8">About Me</h2>
+                <div className="space-y-6 text-foreground text-lg">
+                  <p>
+                    I'm a strategic leader with over a decade of experience in product design, 
+                    customer success, and cross-functional team management. My work bridges the gap 
+                    between user needs and business goals—translating complex data into actionable 
+                    insights, designing scalable experiences, and driving adoption at every level.
+                  </p>
+                  <p>
+                    From leading high-impact projects at SaaS scale to mentoring teams and shaping 
+                    product strategy, I thrive in dynamic environments where empathy, innovation, and 
+                    execution come together to create meaningful outcomes.
+                  </p>
                 </div>
               </div>
             </div>
