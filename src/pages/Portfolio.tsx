@@ -1,8 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CaseStudyCard from "@/components/CaseStudyCard";
@@ -13,24 +10,8 @@ import caseStudy2 from "@/assets/case-study-2.jpg";
 import caseStudy3 from "@/assets/case-study-3.jpg";
 import caseStudy4 from "@/assets/case-study-4.jpg";
 import { ArrowRight, CheckCircle2, Linkedin, Mail } from "lucide-react";
-import { useState } from "react";
-import { toast } from "sonner";
+
 const Portfolio = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Form submission logic would go here
-    toast.success("Message sent successfully!");
-    setFormData({
-      name: "",
-      email: "",
-      message: ""
-    });
-  };
   return <div className="min-h-screen flex flex-col">
       <Header />
       
@@ -121,38 +102,29 @@ const Portfolio = () => {
               </div>
               <div className="grid md:grid-cols-2 gap-12">
                 <Card className="p-8 shadow-lg border-2">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
-                      <Label htmlFor="name" className="text-foreground">
-                        Name
-                      </Label>
-                      <Input id="name" type="text" value={formData.name} onChange={e => setFormData({
-                      ...formData,
-                      name: e.target.value
-                    })} required className="focus-visible-ring" aria-required="true" />
+                  <div className="space-y-6">
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-semibold">Send me an email</h3>
+                      <p className="text-muted-foreground">
+                        Click the button below to open your email client and send me a message directly.
+                      </p>
                     </div>
-                    <div>
-                      <Label htmlFor="email" className="text-foreground">
-                        Email
-                      </Label>
-                      <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
-                      ...formData,
-                      email: e.target.value
-                    })} required className="focus-visible-ring" aria-required="true" />
-                    </div>
-                    <div>
-                      <Label htmlFor="message" className="text-foreground">
-                        Message
-                      </Label>
-                      <Textarea id="message" value={formData.message} onChange={e => setFormData({
-                      ...formData,
-                      message: e.target.value
-                    })} required rows={5} className="focus-visible-ring" aria-required="true" />
-                    </div>
-                    <Button type="submit" size="lg" className="w-full focus-visible-ring shadow-md hover:shadow-lg transition-shadow">
-                      Send Message
+                    <Button 
+                      size="lg" 
+                      className="w-full focus-visible-ring shadow-md hover:shadow-lg transition-shadow"
+                      asChild
+                    >
+                      <a href="mailto:contact@example.com?subject=Portfolio Inquiry">
+                        <Mail className="mr-2 h-5 w-5" />
+                        Email Me
+                      </a>
                     </Button>
-                  </form>
+                    <div className="pt-4 border-t">
+                      <p className="text-sm text-muted-foreground">
+                        Or reach out via LinkedIn for a quicker response.
+                      </p>
+                    </div>
+                  </div>
                 </Card>
                 <div className="flex flex-col justify-center space-y-8">
                   <div>
