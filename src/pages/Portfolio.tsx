@@ -174,9 +174,7 @@ const Portfolio = () => {
                   </div>
                   <div>
                     <Button variant="outline" size="lg" asChild className="w-full focus-visible-ring border-2 shadow-sm hover:shadow-md transition-shadow">
-                      <a href="/resume.pdf" download>
-                        Download Resume
-                      </a>
+                      
                     </Button>
                   </div>
                 </div>
