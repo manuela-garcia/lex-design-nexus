@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ImageCarousel from "@/components/ImageCarousel";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
 import caseStudyImage from "@/assets/case-study-3.jpg";
 // Carousel slide images - Replace these paths with your actual screenshots
 import slide1 from "@/assets/lxp-slide-1.png";
@@ -12,11 +13,19 @@ import slide2 from "@/assets/lxp-slide-2.png";
 import slide3 from "@/assets/lxp-slide-3.png";
 
 const CaseStudyLXP = () => {
+  const titleRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    if (titleRef.current) {
+      titleRef.current.focus();
+    }
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-grow">
+      <main className="flex-grow" id="main-content">
         {/* Hero Section */}
         <section className="py-16 md:py-20 bg-gradient-subtle border-b-2 border-border/50">
           <div className="container mx-auto px-4 lg:px-8">
@@ -27,7 +36,7 @@ const CaseStudyLXP = () => {
               </Link>
             </Button>
             <div className="max-w-4xl">
-              <h1 className="mb-6">LXP Integration Product Work</h1>
+              <h1 ref={titleRef} tabIndex={-1} className="mb-6 focus:outline-none">LXP Integration Product Work</h1>
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
                 Led content architecture, requirements gathering, and workflow design for a complex 
                 Learning Experience Platform integration initiative.

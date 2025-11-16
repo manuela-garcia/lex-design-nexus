@@ -6,17 +6,26 @@ import ImageCarousel from "@/components/ImageCarousel";
 import caseStudyImage from "@/assets/case-study-4.jpg";
 import { ArrowLeft, Target, Users, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
 // Carousel slide images - Replace these paths with your actual screenshots
 import slide1 from "@/assets/customer-success-slide-1.png";
 import slide2 from "@/assets/customer-success-slide-2.png";
 import slide3 from "@/assets/customer-success-slide-3.png";
 
 const CaseStudyCustomerSuccess = () => {
+  const titleRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    if (titleRef.current) {
+      titleRef.current.focus();
+    }
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
         <section 
           className="relative py-24 md:py-40 overflow-hidden"
@@ -33,7 +42,7 @@ const CaseStudyCustomerSuccess = () => {
               Back to Portfolio
             </Link>
             <div className="max-w-4xl">
-              <h1 className="text-primary-foreground mb-8">
+              <h1 ref={titleRef} tabIndex={-1} className="text-primary-foreground mb-8 focus:outline-none">
                 Customer Success Skills Enablement Program
               </h1>
               <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
