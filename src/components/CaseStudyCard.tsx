@@ -2,28 +2,26 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
-import DeviceMockup from "./DeviceMockup";
 
 interface CaseStudyCardProps {
   title: string;
   description: string;
   image: string;
-  screenshot: string;
   link: string;
   metric?: string;
 }
 
-const CaseStudyCard = ({ title, description, screenshot, link, metric }: CaseStudyCardProps) => {
+const CaseStudyCard = ({ title, description, image, link, metric }: CaseStudyCardProps) => {
   return (
     <Card className="overflow-hidden hover:shadow-xl transition-all duration-500 group focus-within:ring-2 focus-within:ring-ring border-2 hover:border-primary/20 bg-gradient-card">
       <Link to={link} className="block focus:outline-none">
-        {/* Device Mockup Section */}
-        <div className="relative bg-gradient-to-br from-muted/30 to-muted/10">
-          {/* Replace screenshot path with actual screenshots later */}
-          <DeviceMockup 
-            screenshot={screenshot}
-            alt={`${title} interface screenshot - Replace this placeholder with actual app screenshot`}
-            variant="mobile"
+        {/* Image Section */}
+        <div className="relative aspect-video overflow-hidden bg-muted">
+          <img
+            src={image}
+            alt={`${title} preview`}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
           />
           
           {/* Metric Badge */}
