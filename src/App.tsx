@@ -9,6 +9,7 @@ import CaseStudyAnalytics from "./pages/CaseStudyAnalytics";
 import CaseStudyLXP from "./pages/CaseStudyLXP";
 import CaseStudyCustomerSuccess from "./pages/CaseStudyCustomerSuccess";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Portfolio />} />
           <Route path="/case-study/ui-migration" element={<CaseStudyUIMigration />} />
