@@ -72,13 +72,13 @@ const Portfolio = () => {
               </div>
               
               {/* Hero Portrait - Right on Desktop, Top on Mobile */}
-              <div className="order-1 md:order-2 flex justify-center md:justify-end">
-                <div className="hero-image-container animate-slide-in-right w-full max-w-md">
+              <div className="order-1 md:order-2 flex justify-center md:justify-end items-center">
+                <div className="hero-image-container w-full max-w-[420px]">
                   {/* TODO: Update alt text with your name and title */}
                   <img 
                     src={heroPortrait} 
                     alt="Photo of Manuela Garcia, Learning Experience Designer" 
-                    className="w-full h-auto drop-shadow-2xl"
+                    className="w-full h-auto"
                   />
                 </div>
               </div>
