@@ -114,6 +114,24 @@ All colors MUST be HSL.
   }
 }
 
+/* Hero image slide-in animation */
+@keyframes hero-slide-in {
+  0% {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-image-container {
+    animation: hero-slide-in 600ms ease-out;
+  }
+}
+
 /* Respect reduced motion preferences for accessibility */
 @media (prefers-reduced-motion: reduce) {
   .animate-slide-in-right,
