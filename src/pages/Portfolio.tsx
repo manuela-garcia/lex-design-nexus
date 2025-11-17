@@ -10,6 +10,9 @@ import heroImage from "@/assets/hero-bg.jpg";
 // TODO: Replace this placeholder image with your actual profile photo
 // Upload your photo to: src/assets/about/profile-photo.png
 import profileImage from "@/assets/about/profile-photo.png";
+// TODO: Replace this placeholder with your actual hero portrait (half-body, transparent background)
+// Upload your photo to: src/assets/hero/profile-hero.png
+import heroPortrait from "@/assets/hero/profile-hero.png";
 import caseStudy1 from "@/assets/case-study-1.jpg";
 import caseStudy2 from "@/assets/case-study-2.jpg";
 import caseStudy3 from "@/assets/case-study-3.jpg";
@@ -45,24 +48,39 @@ const Portfolio = () => {
       }}>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20"></div>
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
-            <div className="max-w-4xl">
-              <h1 className="text-primary-foreground mb-8">
-                Manuela Garcia
-              </h1>
-              <p className="text-xl md:text-2xl text-primary-foreground/90 mb-10 max-w-3xl">
-                Specializing in user-centric design, data storytelling, SaaS product enablement, 
-                and cross-functional collaboration to drive measurable business impact.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" variant="secondary" asChild className="focus-visible-ring shadow-lg hover:shadow-xl transition-shadow">
-                  <a href="#work">
-                    View Portfolio
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" asChild className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 focus-visible-ring backdrop-blur-sm">
-                  
-                </Button>
+            <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+              {/* Text Content - Left on Desktop */}
+              <div className="order-2 md:order-1">
+                <h1 className="text-primary-foreground mb-8">
+                  Manuela Garcia
+                </h1>
+                <p className="text-xl md:text-2xl text-primary-foreground/90 mb-10">
+                  Specializing in user-centric design, data storytelling, SaaS product enablement, 
+                  and cross-functional collaboration to drive measurable business impact.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" variant="secondary" asChild className="focus-visible-ring shadow-lg hover:shadow-xl transition-shadow">
+                    <a href="#work">
+                      View Portfolio
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </a>
+                  </Button>
+                  <Button size="lg" variant="outline" asChild className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 focus-visible-ring backdrop-blur-sm">
+                    <a href="#contact">Get In Touch</a>
+                  </Button>
+                </div>
+              </div>
+              
+              {/* Hero Portrait - Right on Desktop, Top on Mobile */}
+              <div className="order-1 md:order-2 flex justify-center md:justify-end">
+                <div className="hero-image-container animate-slide-in-right w-full max-w-md">
+                  {/* TODO: Update alt text with your name and title */}
+                  <img 
+                    src={heroPortrait} 
+                    alt="Photo of Manuela Garcia, Learning Experience Designer" 
+                    className="w-full h-auto drop-shadow-2xl"
+                  />
+                </div>
               </div>
             </div>
           </div>

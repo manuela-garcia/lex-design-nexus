@@ -113,3 +113,15 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Respect reduced motion preferences for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-in-right,
+  .animate-fade-in,
+  .animate-scale-in,
+  .hero-image-container {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
